@@ -146,6 +146,15 @@
 
         //executed when onChange() is triggered on duration filter dropdown
         function selectDuration(event) {
+            document.getElementById("data").textContent = "";
+
+            let duration = event.target.value;
+
+            filters["duration"]=duration;
+
+            generateFilterPillsAndUpdateDOM(filters);
+            let filteredAdventures = filterFunction(adventures, filters);
+            addAdventureToDOM(filteredAdventures);
             // TODO: MODULE_FILTERS
             // 1. Change the DOM to show the selected duration filter. Use the provided input event
             // 2. Invoke saveFiltersToLocalStorage here
@@ -154,6 +163,12 @@
 
         //executed when clear button is clicked on duration filter dropdown
         function clearDuration(event) {
+            document.getElementById("data").textContent="";
+
+            filters["duration"] = "";
+            let filteredAdventures = filterFunction(adventures, filters);
+            addAdventureToDOM(filteredAdventures);
+
             // TODO: MODULE_FILTERS
             // 1. Change the DOM to clear the Duration filter. Refer clearCategory() below
             // 2. Invoke saveFiltersToLocalStorage here
