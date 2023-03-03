@@ -144,7 +144,6 @@ function filterFunction(list, filters) {
   // 2. Depending on which filters are needed, invoke the filterByDuration() and/or filterByCategory() methods
 
 
-
   // Place holder for functionality to work in the Stubs
   return list;
 }
