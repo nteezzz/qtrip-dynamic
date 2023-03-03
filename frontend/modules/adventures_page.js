@@ -167,7 +167,7 @@ function getFiltersFromLocalStorage() {
 
 
   // Place holder for functionality to work in the Stubs
-  
+  return null;
 }
 
 //Implementation of DOM manipulation to add the following filters to DOM :
